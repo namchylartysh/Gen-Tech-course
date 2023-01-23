@@ -1,10 +1,10 @@
-Сайт-визитка студии фотографа и дизайнера:
-Отображение каталогов услуг - Read 
-Добавление новых услуг - Update
-Удаление услуг - Delete
-Отображение портфолио - Read
-Добавление новых работ - Update
-Удаление неактуальных работ - Delete
-Отображение контактов - Read
-Оставить отзывы о студии - Create
-Аналитика посещаемости сайта - Aggregation
+Website of photo-studio:
+Service offers - Read 
+Adding of new offers - Update
+Deleting of service offer - Delete
+Display of portfolio - Read
+Adding to portfolio - Update
+Deleting unnecessary works - Delete
+Contacts - Read
+Review about the studio - Create
+Site traffic analytics - Aggregation
