@@ -1,0 +1,25 @@
+(1) 
+DELETE FROM Suppliers 
+WHERE Country=‘USA'
+
+(2)
+SELECT * 
+FROM Products
+WHERE Price BETWEEN 100 AND 200
+ORDER BY Price DESC
+
+(3) 
+UPDATE Customers
+SET ContactName=''
+WHERE NOT Country IN ('Germany', 'France’)
+
+(4) 
+SELECT * 
+FROM Products
+WHERE CategoryID IN (2, 3)
+ORDER BY Price DESC
+LIMIT 5
+
+(5) 
+DELETE FROM Suppliers 
+WHERE NOT Country=‘Japan'

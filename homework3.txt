@@ -1,0 +1,4 @@
+SELECT COUNT(*) AS product_quantity, SupplierName
+FROM [Products]
+JOIN Suppliers ON Products.SupplierID=Suppliers.SupplierID
+GROUP BY SupplierName
