@@ -1,0 +1,42 @@
+ЗАДАЧА (1)
+    - вывести все товары, кроме категории напитков, в диапазоне цены от 1 до 100
+
+SELECT * 
+FROM [Products]
+WHERE NOT CategoryID=1 AND Price < 100
+
+ЗАДАЧА (2)
+    - посчитать сумму стоимостей всех товаров из категории напитков
+
+SELECT SUM(Price) AS sum_of_prices_of_all_products
+FROM [Products]
+WHERE CategoryID=1
+
+ЗАДАЧА (3)
+    - найти поставщика с минимальным ко-вом товаров
+
+SELECT COUNT(*) AS product_quantity, SupplierName
+FROM [Products]
+JOIN Suppliers ON Products.SupplierID=Suppliers.SupplierID
+GROUP BY SupplierName
+ORDER BY product_quantity ASC
+LIMIT 1
+
+ЗАДАЧА (4)
+    - вывести сотрудника с максимальным ко-вом заказов
+
+SELECT COUNT(OrderID) AS order_quantity, LastName, FirstName
+FROM [Orders]
+JOIN Employees ON Orders.EmployeeID=Employees.EmployeeID
+GROUP BY Employees.EmployeeID
+ORDER BY order_quantity DESC
+LIMIT 1
+
+ЗАДАЧА (5)
+    - из сотрудников 1 и 2 показать того, у кого заказов больше
+
+SELECT COUNT(*) AS order_quantity, LastName, FirstName
+FROM [Employees] 
+LEFT JOIN Orders ON Employees.EmployeeID=Orders.EmployeeID
+GROUP BY Employees.EmployeeID=1
+ORDER BY order_quantity DESC
