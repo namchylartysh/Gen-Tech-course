@@ -1,0 +1,47 @@
+use MyDB
+
+
+db.createCollection(users)	
+db.createCollection(chats)
+db.createCollection(messages)
+db.createCollection(reactions)
+
+
+db.users.insertMany([
+	{
+		 «id» : 
+		«fullname» :
+	  	«created_at» :
+		 «email» :
+	}
+])
+
+db.chats.insertMany([
+	{
+		 «id» : 
+		«user1_id» :
+		«user2_id» :
+		«user3_id» :
+	  	«created_at» :
+	}
+])
+
+db.meesages.insertMany([
+	{
+		 «id» : 
+		«created_at» :
+		«text» :
+  		"author_id» :		 
+		«recipient_id» :
+		«chat_id» :
+	}
+])
+
+db.reactions.insertMany([
+	{
+		 «id» : 
+		«user_id» :
+		«text_id» :
+	  	«created_at» :
+	}
+])
