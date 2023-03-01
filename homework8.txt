@@ -1,0 +1,13 @@
+db.calls.aggregate([
+
+    {
+        '$group' : {
+            '_id' : '$user_id',
+            'total_calls' : {'$count': {}},
+            'total_duration_secs' : {'$sum' : '$duration_secs'}
+        }
+     }
+])
+
+
+Вторую задачу не понял как делать, когда нет коллекции товаров
